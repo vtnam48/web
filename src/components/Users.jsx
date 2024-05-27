@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 function Users() {
   const [users, setUsers] = useState([]);
 
-  const REACT_APP_API_URL = "http://localhost:8080/users";
+  const URL = "http://localhost:8080/users";
 
   useEffect(() => {
     axios
-      .get(`${REACT_APP_API_URL}`)
+      .get(`${URL}`)
       .then((res) => {
         console.log(res.data);
         setUsers(res.data);
@@ -19,7 +19,7 @@ function Users() {
 
   const handleDelete = (id) => {
     axios
-      .delete(`${REACT_APP_API_URL}/${id}`)
+      .delete(`${URL}/${id}`)
       .then((res) => {
         console.log(res);
         window.location.reload();
@@ -57,7 +57,7 @@ function Users() {
                 <td>{user.university}</td>
                 <td>
                   <Link to={`/users/${user.id}`} className="btn btn-info me-2">
-                    More Info
+                    Info
                   </Link>
                   <Link
                     to={`/users/${user.id}`}

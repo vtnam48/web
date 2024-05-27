@@ -11,11 +11,11 @@ function UpdateUser() {
   const [university, setUniversity] = useState("");
   const navigate = useNavigate();
 
-  const REACT_APP_API_URL = "http://localhost:8080/users";
+  const URL = "http://localhost:8080/users";
 
   useEffect(() => {
     axios
-      .get(`${REACT_APP_API_URL}/${id}`)
+      .get(`${URL}/${id}`)
       .then((res) => {
         console.log(res);
         setName(res.data.name);
@@ -28,7 +28,7 @@ function UpdateUser() {
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      const result = await axios.put(`${REACT_APP_API_URL}/${id}`, {
+      const result = await axios.put(`${URL}/${id}`, {
         name,
         gender,
         university,

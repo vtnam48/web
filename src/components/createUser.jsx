@@ -8,12 +8,12 @@ function CreateUser() {
   const [university, setUniversity] = useState("");
   const navigate = useNavigate();
 
-  const REACT_APP_API_URL = "http://localhost:8080/users";
+  const URL = "http://localhost:8080/users";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`${REACT_APP_API_URL}`, {
+      const response = await axios.post(`${URL}`, {
         name,
         gender,
         university,

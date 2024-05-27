@@ -1,10 +1,10 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Users from "./Users";
-import CreateUser from "./createUser";
-import UpdateUser from "./updateUser";
-import InfoUser from "./infoUser";
+import Users from "./components/Users";
+import CreateUser from "./components/createUser";
+import UpdateUser from "./components/updateUser";
+import InfoUser from "./components/infoUser";
 
 function App() {
   return (

@@ -6,11 +6,11 @@ function InfoUser() {
   const { id } = useParams();
   const [user, setUser] = useState(null);
 
-  const REACT_APP_API_URL = "http://localhost:8080/users";
+  const URL = "http://localhost:8080/users";
 
   useEffect(() => {
     axios
-      .get(`${REACT_APP_API_URL}/${id}`)
+      .get(`${URL}/${id}`)
       .then((res) => {
         setUser(res.data);
       })
